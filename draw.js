@@ -16,7 +16,7 @@ var canvas = null;
 var context2D = null;
 var player = null;
 var bullets = [];
-
+var bearAlpha = 1.0;
 
 function getWindowSize() {
     var myWidth = 0, myHeight = 0;
@@ -156,8 +156,10 @@ $(function() {
 	  palette[i + 192][3] = i * 4;
       }
 
-      imagesToLoad = 1;
+      imagesToLoad = 3;
       circleImage = loadImage("circle.png");
+      bearImage = loadImage("nalle.png");
+      bearBackground = loadImage("nalle-tausta.png");
 });
     
 $(window).resize(resizeWindow);
@@ -262,6 +264,8 @@ function draw() {
     time = now.getTime() / 1000 - startTime;
     var timeStep = time - timePrev;
 
+    bearAlpha *= .9;
+
     updateBullets(timeStep);
     if (bullets.used == 0) {
 	for (var alpha = 0 ;
@@ -280,6 +284,7 @@ function draw() {
 					  ccos * bulletSpeed * 2,
 					  csin * bulletSpeed * 2));
 	}
+	bearAlpha = 1.5;
     }
 
     reduceBob(shadebob, .9);
@@ -304,7 +309,8 @@ function draw() {
 
     context2D.fillStyle = "#FCF79B";
     context2D.beginPath();
-    for (var alpha = 0 ; alpha < Math.PI * 2.0 ; alpha += Math.PI / (16 / 2)) {
+    var alphaStart = Math.sin(time) * Math.PI / 5;
+    for (var alpha = alphaStart ; alpha < Math.PI * 2.0 + alphaStart ; alpha += Math.PI / (16 / 2)) {
 	context2D.moveTo(canvas.width / 2, canvas.height / 2);
 	context2D.lineTo(canvas.width / 2 + Math.cos(alpha - 0.1) * radius,
 			 canvas.height / 2 + Math.sin(alpha - 0.1) * radius);
@@ -317,9 +323,15 @@ function draw() {
 
     context2D.drawImage(drawbuffer, 0, 0, drawbuffer.width, drawbuffer.height,
 		       0, 0, canvas.width, canvas.height);
-/*
-    context2D.drawImage(circleImage,
-			canvas.width / 2 + Math.sin(time) * canvas.width / 3,
-			canvas.height / 2 + Math.sin(time) * canvas.height / 3);
-*/
+
+    context2D.drawImage(bearBackground, 0, 0, bearImage.width, bearImage.height,
+			canvas.width / 2 - bearImage.width / 2 * scale * bearAlpha,
+			canvas.height / 2 - bearImage.height / 2 * scale * bearAlpha,
+			bearImage.width * scale * bearAlpha,
+			bearImage.height * scale * bearAlpha);
+    context2D.drawImage(bearImage, 0, 0, bearImage.width, bearImage.height,
+			canvas.width / 2 - bearImage.width / 2 * scale,
+			canvas.height / 2 - bearImage.height / 2 * scale,
+			bearImage.width * scale,
+			bearImage.height * scale);
 }
