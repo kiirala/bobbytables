@@ -70,17 +70,11 @@
      id="layer1"
      transform="translate(0,-988.36218)">
     <path
-       sodipodi:type="arc"
-       style="color:#000000;fill:#ff0000;stroke:#ff0000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;filter:url(#filter3797);enable-background:accumulate;fill-opacity:0.1254902"
-       id="path2982"
-       sodipodi:cx="31.696682"
-       sodipodi:cy="32"
-       sodipodi:rx="26.99526"
-       sodipodi:ry="26.99526"
-       d="m 58.691942,32 c 0,14.909071 -12.086189,26.99526 -26.99526,26.99526 C 16.787611,58.99526 4.7014217,46.909071 4.7014217,32 c 0,-14.909071 12.0861893,-26.9952602 26.9952603,-26.9952602 14.909071,0 26.99526,12.0861892 26.99526,26.9952602 z"
        transform="matrix(0.83981933,0,0,0.83981933,5.0771959,993.48796)"
-       inkscape:export-filename="/home/niko/git/bobbytables/circle.png"
-       inkscape:export-xdpi="51.740002"
-       inkscape:export-ydpi="51.740002" />
+       style="color:#000000;fill:#ff0000;fill-opacity:0.1254902;stroke:#ff0000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;filter:url(#filter3797);enable-background:accumulate"
+       d="m 53.996732,30.013565 c 0,6.382963 8.035713,10.806762 5.316323,15.844426 -3.632452,6.729112 -14.93681,10.789664 -23.462918,10.789664 -7.990441,0 -22.574031,1.58478 -27.5167768,-3.932398 C 4.0536177,47.938135 3.0761568,33.86225 3.0761568,26.94362 c 0,-9.610245 8.2723042,-8.296002 15.8349042,-13.079502 4.16981,-2.63749 5.680945,-10.4846431 10.979771,-10.4846431 8.823119,0 20.865153,2.6441782 25.687826,9.8095641 3.326552,4.942493 -1.581926,10.738574 -1.581926,16.824526 z"
+       id="path2982"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssssssss" />
   </g>
 </svg>
