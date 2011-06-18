@@ -117,6 +117,9 @@ $(function() {
       drawcontext = drawbuffer.getContext('2d');
       
       resizeWindow();
+
+      context2D.clearRect(0, 0, canvas.width, canvas.height);
+      drawcontext.clearRect(0, 0, drawbuffer.width, drawbuffer.height);
       
       shadebob = new Array(nominalWidth);
       for (var i = 0 ; i < nominalWidth ; ++i) {
@@ -276,13 +279,14 @@ function draw() {
 	    var bend = Math.sin(time / 4.0) * 2;
 	    var ccos = Math.cos(alpha + bend);
 	    var csin = Math.sin(alpha + bend);
+	    var bulletScale = Math.sqrt((cos+ccos)*(cos+ccos) + (sin+csin)*(sin+csin));
             addBullet(bullets, new Bullet(circleImage,
 					  nominalWidth / 2 + cos * 40,
 					  nominalHeight / 2 + sin * 40,
-					  cos * bulletSpeed,
-					  sin * bulletSpeed,
-					  ccos * bulletSpeed * 2,
-					  csin * bulletSpeed * 2));
+					  cos * bulletSpeed / bulletScale,
+					  sin * bulletSpeed / bulletScale,
+					  ccos * bulletSpeed * 2 / bulletScale,
+					  csin * bulletSpeed * 2 / bulletScale));
 	}
 	bearAlpha = 1.5;
     }
@@ -324,14 +328,16 @@ function draw() {
     context2D.drawImage(drawbuffer, 0, 0, drawbuffer.width, drawbuffer.height,
 		       0, 0, canvas.width, canvas.height);
 
-    context2D.drawImage(bearBackground, 0, 0, bearImage.width, bearImage.height,
-			canvas.width / 2 - bearImage.width / 2 * scale * bearAlpha,
-			canvas.height / 2 - bearImage.height / 2 * scale * bearAlpha,
-			bearImage.width * scale * bearAlpha,
-			bearImage.height * scale * bearAlpha);
+    context2D.drawImage(bearBackground,
+			0, 0,
+			bearBackground.width, bearBackground.height,
+			canvas.width / 2 - bearBackground.width / 2 * scale * bearAlpha,
+			canvas.height / 2 - bearBackground.height / 2 * scale * bearAlpha,
+			bearBackground.width * scale * bearAlpha,
+			bearBackground.height * scale * bearAlpha);
     context2D.drawImage(bearImage, 0, 0, bearImage.width, bearImage.height,
-			canvas.width / 2 - bearImage.width / 2 * scale,
-			canvas.height / 2 - bearImage.height / 2 * scale,
-			bearImage.width * scale,
-			bearImage.height * scale);
+			canvas.width / 2 - bearImage.width / 4 * scale,
+			canvas.height / 2 - bearImage.height / 4 * scale,
+			bearImage.width * scale / 2,
+			bearImage.height * scale / 2);
 }
