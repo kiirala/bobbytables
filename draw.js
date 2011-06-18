@@ -1,5 +1,5 @@
 // target frames per second
-const FPS = 30;
+const FPS = 15;
 var playerSpeed = 60;
 var canvasSpeed = 30;
 var bulletSpeed = 200;
