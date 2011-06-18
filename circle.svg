@@ -14,18 +14,13 @@
    id="svg1901"
    sodipodi:version="0.32"
    inkscape:version="0.48.1 r9760"
-   sodipodi:docname="Uusi asiakirja 1"
-   version="1.1">
+   sodipodi:docname="circle.svg"
+   version="1.1"
+   inkscape:export-filename="/home/niko/git/bobbytables/circle.png"
+   inkscape:export-xdpi="51"
+   inkscape:export-ydpi="51">
   <defs
      id="defs1903">
-    <filter
-       inkscape:collect="always"
-       id="filter3756">
-      <feGaussianBlur
-         inkscape:collect="always"
-         stdDeviation="1.6098091"
-         id="feGaussianBlur3758" />
-    </filter>
     <filter
        inkscape:collect="always"
        id="filter3797"
@@ -46,7 +41,7 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="4.6624853"
+     inkscape:zoom="6.59375"
      inkscape:cx="32"
      inkscape:cy="32"
      inkscape:document-units="px"
@@ -76,13 +71,13 @@
      transform="translate(0,-988.36218)">
     <path
        sodipodi:type="arc"
-       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;filter:url(#filter3797);enable-background:accumulate"
+       style="color:#000000;fill:#ff0000;stroke:#ff0000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;filter:url(#filter3797);enable-background:accumulate;fill-opacity:0.1254902"
        id="path2982"
        sodipodi:cx="31.696682"
        sodipodi:cy="32"
        sodipodi:rx="26.99526"
        sodipodi:ry="26.99526"
-       d="M 58.691942,32 A 26.99526,26.99526 0 1 1 4.7014217,32 26.99526,26.99526 0 1 1 58.691942,32 z"
+       d="m 58.691942,32 c 0,14.909071 -12.086189,26.99526 -26.99526,26.99526 C 16.787611,58.99526 4.7014217,46.909071 4.7014217,32 c 0,-14.909071 12.0861893,-26.9952602 26.9952603,-26.9952602 14.909071,0 26.99526,12.0861892 26.99526,26.9952602 z"
        transform="matrix(0.83981933,0,0,0.83981933,5.0771959,993.48796)"
        inkscape:export-filename="/home/niko/git/bobbytables/circle.png"
        inkscape:export-xdpi="51.740002"
