@@ -1,0 +1,31 @@
+body {
+    margin: 0px;
+}
+
+canvas {
+    display: block;
+    border: 0px;
+    padding: 0px;
+}
+
+div.game {
+    display: table;
+    margin: 0px auto 0px auto;
+}
+
+div.game > * {
+    display: table-cell;
+    vertical-align: top;
+}
+
+div.left p {
+    margin: 0px;
+}
+
+div.right p {
+    margin: 0px;
+}
+
+p.counter {
+    text-align: right;
+}
